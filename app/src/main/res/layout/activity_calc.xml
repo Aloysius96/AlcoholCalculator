@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.mattp.alcoholcalculator.CalcActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:gravity="left"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textIns"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:text="Fill in all to calculate alcohol content"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/textWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weight (Pounds)"
+                android:textSize="20dp"
+                android:paddingTop="13dp"
+                android:layout_alignBaseline="@+id/editWeight"
+                android:layout_alignBottom="@+id/editWeight"
+                android:layout_alignParentRight="true"/>
+            <EditText
+                android:id="@+id/editWeight"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:maxLength="5"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:inputType="numberDecimal"
+                android:clickable="false"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"/>
+
+            <TextView
+                android:id="@+id/textBev"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beverage Quantity (oz)"
+                android:textSize="20dp"
+                android:paddingTop="13dp"
+                android:layout_alignParentRight="true"/>
+            <EditText
+                android:id="@+id/editBev"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:maxLength="3"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:hint="Eg: 12"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:id="@+id/textPer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alcohol Percentage (%)"
+                android:textSize="20dp"
+                android:paddingTop="13dp" />
+            <EditText
+                android:id="@+id/editPer"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:maxLength="4"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:hint="Eg: 4"
+                android:inputType="numberDecimal"/>
+
+            <TextView
+                android:id="@+id/textNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Drinks"
+                android:textSize="20dp"
+                android:paddingTop="13dp" />
+            <EditText
+                android:id="@+id/editNum"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="0dp"
+                android:maxLength="2"
+                android:ems="10"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:hint="Eg: 4"
+                android:inputType="number"/>
+
+            <Button
+                android:id="@+id/buttoncalc"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="CALCULATE!" />
+
+            <TextView
+                android:id="@+id/textBAC"
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="BAC Value: ?"
+                android:paddingTop="15dp" />
+
+            <TextView
+                android:id="@+id/textOut"
+                android:layout_width="322dp"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="Outcome: ?"
+                android:paddingTop="15dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

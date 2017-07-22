@@ -7,10 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.GoogleApiAvailability;
-import com.google.android.gms.common.api.GoogleApiClient;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -18,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //First button to move to PersonalityActivity class
         Button buttoncalc = (Button) findViewById(R.id.buttcalc);
         buttoncalc.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Second button to move to DataExActivity class
         Button buttonex = (Button) findViewById(R.id.buttex);
         buttonex.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Third buttoon to launch a browser link about BAC legal chart
         Button buttonl1 = (Button) findViewById(R.id.buttlink1);
         buttonl1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Fourth button to launch a browser link about malaysian transportation rules on drunk driving
         Button buttonl2 = (Button) findViewById(R.id.buttlink2);
         buttonl2.setOnClickListener(new View.OnClickListener() {
             @Override

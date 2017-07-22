@@ -34,6 +34,7 @@ public class CalcActivity extends AppCompatActivity {
         final String drunk3 = "Obviously Drunk";
         final String drunk4 = "Super Drunk";
         final String drunk5 = "Get help immediately";
+        //holds strings that will display when totalbac value is calculated
 
         editText1 = (EditText) findViewById(R.id.editWeight);
         editText2 = (EditText) findViewById(R.id.editBev);
@@ -41,9 +42,12 @@ public class CalcActivity extends AppCompatActivity {
         editText4 = (EditText) findViewById(R.id.editNum);
 
         double kglbs = getIntent().getExtras().getDouble("pounds");
+        //collects the pound data is being push from the previous activity
         String convlbs = String.valueOf(kglbs);
+        //converts the pushed data to string
         EditText passWeight = (EditText) findViewById(R.id.editWeight);
         passWeight.setText(convlbs);
+        //passes the string to editWeight
 
         context1 = this.getApplicationContext();
 
@@ -57,6 +61,7 @@ public class CalcActivity extends AppCompatActivity {
                         (editText3.getText().toString().trim().length() <= 0) ||
                         (editText4.getText().toString().trim().length() <= 0)){
                     Toast.makeText(CalcActivity.this, "Input a value to calculate!", Toast.LENGTH_SHORT).show();
+                    //toast will display if one of the edittext has no input
                 }
                 else {
 
@@ -67,14 +72,17 @@ public class CalcActivity extends AppCompatActivity {
 
                     final double totalbac = ((150 / mEdit1) * (mEdit3 / 50)
                             * (mEdit2 * mEdit4) * (0.025));
+                    //standard formula to calculate blood alcohol content
 
                     int tole = Toast.LENGTH_SHORT;
                     CharSequence conv = "Calculated!";
                     Toast toast = Toast.makeText(context1, conv, tole);
                     toast.show();
+                    //toast displays if successfully calculated
 
                     txtVal = (TextView) findViewById(R.id.textBAC);
                     txtVal.setText(String.format("BAC Value: %.2f", totalbac));
+                    //displays bac value
 
                     if (totalbac > 0.01 && totalbac < 0.08) {
                         txtVal1 = (TextView) findViewById(R.id.textOut);
@@ -92,6 +100,7 @@ public class CalcActivity extends AppCompatActivity {
                         txtVal1 = (TextView) findViewById(R.id.textOut);
                         txtVal1.setText("Outcome: " + drunk5);
                     }
+                    //displays outcome according to totalbac values
                 }
             }
         });

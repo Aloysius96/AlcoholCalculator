@@ -47,11 +47,7 @@
                 android:maxLength="5"
                 android:ems="10"
                 android:backgroundTint="@android:color/holo_red_dark"
-                android:inputType="numberDecimal"
-                android:clickable="false"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:focusableInTouchMode="false"/>
+                android:inputType="numberDecimal"/>
 
             <TextView
                 android:id="@+id/textBev"
